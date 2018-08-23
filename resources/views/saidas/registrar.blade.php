@@ -68,7 +68,7 @@
                 <label for="quantidade" class="col-md-4 control-label">Quantidade de Itens</label>
 
                 <div class="col-md-6">
-                    <input id="quantidade" type="text" class="form-control" name="quantidade" value="{{ old('quantidade') }}" required>
+                    <input id="quantidade" type="number" class="form-control" name="quantidade" value="{{ old('quantidade') }}" required>
 
                     @if ($errors->has('quantidade'))
                         <span class="help-block">

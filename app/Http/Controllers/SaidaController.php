@@ -36,7 +36,7 @@ class SaidaController extends Controller
 
 		   	$produto_buscado = Produto::find($dados['produto_id']);
 
-		   	if ($dados['produto_id'] != $produto_buscado->filial_id) {
+		   	if ($dados['filial_id'] != $produto_buscado->filial_id) {
 				return back()->with(['error' => "Produto pertence a outra filial!"]);
 		   	}
 
@@ -61,6 +61,7 @@ class SaidaController extends Controller
 	            $produto_buscado->quantidade_total = $qtd_produtos_total - $quantidade_post;
 	            $produto_buscado->save();
 
+	            $pedido->produto_id = $dados['produto_id'];
 	            $pedido->filial_id = $dados['filial_id'];
 	            $pedido->save();
 			}

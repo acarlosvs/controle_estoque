@@ -41,7 +41,7 @@
                 <label for="quantidade_total" class="col-md-4 control-label">Quantidade de Itens</label>
 
                 <div class="col-md-6">
-                    <input id="quantidade_total" type="text" class="form-control" name="quantidade_total" value="{{ old('quantidade_total') }}" required>
+                    <input id="quantidade_total" type="number" class="form-control" name="quantidade_total" value="{{ old('quantidade_total') }}" required>
 
                     @if ($errors->has('quantidade_total'))
                         <span class="help-block">
