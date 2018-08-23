@@ -1,0 +1,14 @@
+body{
+	margin-top: 0px;
+	padding-top: 80px;
+}
+
+header , section, footer, nav, main, article, figure {
+    display: block;
+    padding: 1px;
+    margin: 1px;
+}
+
+main section,main aside{
+    display: inline-block;
+}
