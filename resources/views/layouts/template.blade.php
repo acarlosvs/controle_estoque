@@ -42,9 +42,10 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url('/filial/lista') }}">Filiais</a></li>
+                    <li><a href="{{ url('/filial/cadastro') }}">Filiais</a></li>
+                    <li><a href="{{ url('/estoque/cadastro-produtos') }}">Produto</a></li>
                     <li><a href="{{ url('/estoque/lista') }}">Estoque</a></li>
-                    <li><a href="{{ url('/saida/lista') }}">Saída</a></li>
+                    <li><a href="{{ url('/saida/registrar') }}">Saída</a></li>
                 </ul>
             </div>
         </div>

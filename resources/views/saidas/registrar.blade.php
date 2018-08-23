@@ -51,7 +51,7 @@
                         <option value="#">Selecione Um Produto</option>
                         @foreach($produtos as $produto)
                             <option value="{{ $produto->id }}" @if(old('produto_id') == $produto->id) @endif>
-                                {{ $produto->nome }}
+                                {{ $produto->id }} - {{ $produto->nome }}
                             </option>
                         @endforeach
                     </select>

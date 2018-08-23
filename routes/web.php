@@ -15,6 +15,7 @@ Route::get('/filial/lista', 'FilialController@index');
 Route::get('/filial/cadastro', 'FilialController@formFilial');
 Route::post('/filial/cadastro', 'FilialController@cadastrar');
 Route::get('/estoque/lista', 'EstoqueController@index');
+Route::post('/estoque/buscar-produtos', 'EstoqueController@buscar');
 Route::get('/estoque/cadastro-produtos', 'EstoqueController@formEstoque');
 Route::post('/estoque/cadastro-produtos', 'EstoqueController@cadastrar');
 Route::get('/entrada/cadastro', 'EntradaController@formEntrada');

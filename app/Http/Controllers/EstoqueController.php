@@ -11,7 +11,9 @@ class EstoqueController extends Controller
 {
 	public function index()
 	{
-		return view('estoque.lista');
+		$filiais = Filial::select('id', 'nome')->get();
+
+		return view('estoque.lista', compact('filiais'));
 	}
 
 	public function formEstoque()
@@ -36,5 +38,14 @@ class EstoqueController extends Controller
 		} catch (\Exception $e) {
 			return back()->with(['error' => $e->getMessage()]);
 		}
+	}
+
+	public function buscar(Request $request)
+	{
+		$dados = $request->all();
+
+		$produto_buscado = Produto::where('filial_id', $dados['filial_id'])->get();
+
+		return view('estoque.resultado_busca', compact('produto_buscado'));
 	}
 }
